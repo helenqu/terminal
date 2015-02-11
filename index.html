@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+</head>
+<body>
+	<form name="terminal" action="#" method="post" onsubmit="return process()">
+		<input type="text" id="command" name="command">
+	</form> 
+
+	<script>
+	function process() {
+		console.log($("#command").val());
+		if ($("#command").val() === "hello") {
+			window.open("hello.html","_self");
+			return false;
+		}
+		return false;
+	}
+	</script>
+
+</body>
+</html>
