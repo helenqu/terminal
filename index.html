@@ -1,46 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<link href='https://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script src="main.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-	<form name="terminal" action="#" method="post" onsubmit="return process()">
-		<input type="text" class="command">
-	</form> 
+	<p>welcome to helen qu's site - type "help" for a list of commands</p>
+	<div class="terminal_line">
+		:~$ &nbsp; 
+		<form name="terminal" action="#" method="post" onsubmit="return process()">
+			<input type="text" class="command">
+		</form>
+	</div>
 	<div id="output"></div>
 	<script>
-	function process() {
-		console.log($(".command:last").val());
-		switch ($(".command:last").val()) {
-			case "ls":
-				$("#output").append("<p>about &nbsp; &nbsp; &nbsp; &nbsp; projects</p>");
-				$("#output").append("<p>resume &nbsp; &nbsp; &nbsp; contact</p>");
-				$("#output").append("<form name='terminal' action='#' method='post' onsubmit='return process()'><input type='text' class='command'></form>");
-				return false;
-				break;
-			case "cd about":
-				window.open("about.html","_self");
-				return false;
-				break;
-			case "cd projects":
-				window.open("projects.html","_self");
-				return false;
-				break;
-			case "cd resume":
-				window.open("resume.pdf","_self");
-				return false;
-				break;
-			case "cd contact":
-				window.open("contact.pdf","_self");
-				return false;
-				break;
-			default:
-				$("#output").append("<p>This command doesn't exist.</p>");
-				$("#output").append("<form name='terminal' action='#' method='post' onsubmit='return process()'><input type='text' class='command'></form>");
-				return false;
-		}
-	}
+		$(".command").focus();
 	</script>
-
 </body>
 </html>
