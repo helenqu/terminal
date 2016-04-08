@@ -16,7 +16,6 @@ form {
 	margin: 0;
 	padding: 0;
 	height: 18px;
-	/*position: fixed;*/
 }
 
 p {
@@ -33,8 +32,6 @@ input[type=text] {
 	border: 0;
 	background-color: transparent;
 	color: white;
-	/*width: 90%;*/
-	/*width: 90vw;*/
 	margin: 0;
 }
 
@@ -48,7 +45,6 @@ a:hover {
 }
 
 .blue {
-	/*margin-left: px;*/
 	color: #67C1D9;
 }
 
