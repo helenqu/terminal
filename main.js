@@ -33,14 +33,14 @@ function process() {
 				$("#output").append("<p>mimera <span id='projects-2'>smartbets</span></p>");
 				$("#output").append("<p>personal site <span id='projects-3'>toast-printer</span></p>");
 				$("#output").append("<p>share-yo <span id='projects-4'>voicebox</span></p>");
+				$("#output").append("<p>duotone-darksky</p>");
 			}
 			append_input();
 			return false;
 		case "clear":
 			$("#output").empty();
 			$("input[type=text], textarea").val("");
-			$(".command").prop("readonly", false);
-			$(".command:last").focus();
+			append_input();
 			return false;
 		case "help":
 			$("#output").append("<p>ls <span class='blue' id='help-ls'>- list the menu sections</span></p>");
@@ -82,7 +82,7 @@ function process_cd(directory) {
 				$("#output").append("<p><a href='mailto:helenqu@seas.upenn.edu'>email</a> | <a href='http://www.facebook.com/helen.qu1'>facebook</a> | <a href='http://github.com/helenqu'>github</a> | <a href='http://linkedin.com/in/helen-qu-8b9342a4'>linkedin</a></p>");
 				append_input();
 				return false;
-			default: 
+			default:
 				$("#output").append("<p>no such file or directory</p>");
 				append_input();
 				return false;
@@ -139,6 +139,11 @@ function process_open(file) {
 			case "voicebox":
 				$("#output").append("<p><span class='blue'>nov '14 (@ hackprinceton fall '14)</span> | top 20 hack | <a href='http://www.github.com/dhruvag/VoiceBox'>github.com/dhruvag/VoiceBox</a></p>");
 				$("#output").append("<p>voice controlled search, archive, etc for email management + unread email previews read out loud</p>");
+				append_input();
+				return false;
+			case "duotone-darksky":
+				$("#output").append("<p><span class='blue'>apr '16</span> | <a href='http://www.atom.io/themes/duotone-darksky'>atom.io/themes/duotone-darksky</a></p>");
+				$("#output").append("<p>duotone (rose / blue) syntax highlighting theme for github's open source text editor, <a href='http://atom.io'>atom</a></p>");
 				append_input();
 				return false;
 			default:

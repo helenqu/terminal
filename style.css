@@ -14,8 +14,8 @@ body {
 form {
 	float: right;
 	margin: 0;
-	padding: 0;
 	height: 18px;
+	width: 500px;
 }
 
 p {
@@ -33,6 +33,7 @@ input[type=text] {
 	background-color: transparent;
 	color: white;
 	margin: 0;
+	width: 100%;
 }
 
 a {
@@ -74,7 +75,7 @@ a:hover {
 
 #projects-2 {
 	margin-left: 120px;
-} 
+}
 
 #projects-3 {
 	margin-left: 68px;
